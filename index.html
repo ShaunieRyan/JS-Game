@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Assignment Quiz">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Quiz">
+        <meta name="author" content="Shauna Ryan">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shauna's Quiz</title>
+        <link rel="icon" href="images/quiz-icon.jfif" type = "image/x-icon">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    </head>    
+    <body>
+        <div class="container">
+            <h1>Shauna's Devious Quiz!</h1>
+            <nav>
+                <a href="index.html">Quiz</a>
+                <a href="html/rules.html">Rules</a>
+                <a href="html/essay.html">Essay</a>
+                <a href="html/contact.html">Contact</a>
+            </nav>
+            <div class="mainContent" id="quizBody">
+                <div id="openingBox">
+                    <img id="openingImage" src="images/quiz-opening.png">
+                    <div id="openingRules">You will have a time limit of 15 seconds to answer each question!</div>
+                    <button id="startButton">Start</button>
+                </div>
+                <div id="quiz" style="display: none">
+                    <div id="questionBox">
+                        <div id="question" class="question"></div>
+                        <img id="questionImage" class="questionImage" >
+                        <div id="choices">
+                            <div class="choice" id="A"></div>
+                            <div class="choice" id="B"></div>
+                            <div class="choice" id="C"></div>
+                        </div>
+                    </div>
+
+                    <div id="progressSection" style="display: none">
+                        <div id="answer" style="display: none"></div>
+                        <div id="progress"></div>
+                        <div id="questionBar">
+                            <span id="questionBarColour"></span>
+                        </div>
+                    </div>
+
+                    <div id="counter"></div>
+                    <div id="next" style="display: none"></div>
+                </div>
+                <div id="closingBox" style="display: none">
+                    <div id="scoreBox"></div>
+                </div>
+                <div id="hits"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/quiz.js"></script>
+    </body> 
+</html>

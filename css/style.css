@@ -1,0 +1,258 @@
+/*General page layout*/
+html {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #151515;
+    color: black;
+    margin: 0;
+    min-height: 90%;
+}
+
+.container {
+    max-width: 75%;
+    height: 100%;
+    margin: auto;
+    background-color: #8D99AE;
+    margin-top: 2%;
+    margin-bottom: 2.5%;
+    padding-top: 2%;
+    padding-bottom: 2.5%;
+}
+
+.mainContent {
+    background-color: #F8F32B;
+    max-width: 70%;
+    max-height: 2%;
+    margin: auto;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
+
+h1, nav {
+    max-width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav {
+    background-color: #FFFFFF;
+    max-width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#contactBody, #quizBody, #rulesBody {
+    min-height: 350px;
+}
+
+#topGap {
+    margin-top: 5%;
+}
+
+#rulesBody p {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+}
+
+#essayBody p {
+    text-align: justify;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+address {
+    margin-top: 10%;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+#quizBody {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*More Fine-Grained Stuff*/
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: blue;
+}
+
+a:hover {
+    font-weight: bolder;
+    color: purple;
+}
+
+nav a {
+    text-decoration: none;
+    color: #151515;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+h1 {
+    background-color: #2B2D42;
+    color: #FFFFFF;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+h2 {
+    font-size: 1.7em;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+h2, h3 {
+    padding-top: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.justifyText {
+    text-align: justify;
+}
+
+#openingRules {
+    margin-bottom: 2%;
+}
+
+button {
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #151515 5%, #2B2D42 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+}
+button:hover {
+	background:linear-gradient(to bottom, #2B2D42 5%, #151515 100%);
+	background-color:#2B2D42;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+#question {
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+#choices {
+    margin: auto;
+}
+
+.choice {
+    margin: 2%;
+    display: inline-block;
+}
+
+.choice:hover {
+    color: purple;
+    font-weight: bold;
+}
+
+/*Image Stuff*/
+
+#openingImage {
+    max-inline-size: 35%;
+    margin-bottom: 1%;
+}
+
+.questionImage {
+    max-inline-size: 150px;
+    margin: auto;
+}
+
+/*Question Progress Stuff*/
+#progress {
+    margin-bottom: 3%;
+}
+
+#answer {
+    margin-bottom: 3%;
+    display: inline-block;
+    padding: 3%;
+    border: 1px solid black;
+}
+
+#counter {
+    margin-top: 1%;
+    font-weight: bolder;
+}
+
+#progressSection {
+    padding-top: 7%;
+    padding-bottom: 3%;
+}
+
+#questionBar {
+    background-color: rgb(26, 24, 24);
+    height: 20px;
+    padding: 4px;
+    max-width: 60%;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: auto;
+}
+#questionBarColour {
+    background-color: teal;
+    border-radius: 5px;
+	border: 1px solid black;
+    height: 18px;
+    width: 0%;
+    display:block;
+}
+
+/*Animation Stuff*/
+:root {
+    --previousWidth: 0%;
+    --newWidth: 0%;
+}
+.animateBar {
+    animation: progressBar;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes progressBar {
+    0% { width: var(--previousWidth); }
+    100% { width: var(--newWidth); }
+}
